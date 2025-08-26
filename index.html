@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecMoveis</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="gauge.min.js"></script>
+</head>
+<body class="container-flex">
+    <div>
+        <h1 class="text-center">Projeto de Tecnologias Móveis</h1>
+    </div>
+    <div class="row bg-dark-subtle py-3">
+        <div class="col"></div>
+        <div class="col">            
+            <button onclick="onoff()" id="lanterna" type="button" class="py-3 w-100 btn btn-outline-secondary" >Lanterna</button>                 
+        </div>        
+        <div class="col"></div>
+    </div>  
+
+    <div class="mx-auto my-5">
+        <canvas data-type="radial-gauge"
+            data-min-value="0"
+            data-max-value="360"
+            data-major-ticks="N,NE,E,SE,S,SW,W,NW,N"
+            data-minor-ticks="22"
+            data-ticks-angle="360"
+            data-start-angle="180"
+            data-stroke-ticks="false"
+            data-highlights="false"
+            data-color-plate="#222"
+            data-color-major-ticks="#f5f5f5"
+            data-color-minor-ticks="#ddd"
+            data-color-numbers="#ccc"
+            data-color-needle="rgba(240, 128, 128, 1)"
+            data-color-needle-end="rgba(255, 160, 122, .9)"
+            data-value-box="false"
+            data-value-text-shadow="false"
+            data-color-circle-inner="#fff"
+            data-color-needle-circle-outer="#ccc"
+            data-needle-circle-size="15"
+            data-needle-circle-outer="false"
+            data-animation-rule="linear"
+            data-needle-type="line"
+            data-needle-start="75"
+            data-needle-end="99"
+            data-needle-width="3"
+            data-borders="true"
+            data-border-inner-width="0"
+            data-border-middle-width="0"
+            data-border-outer-width="10"
+            data-color-border-outer="#ccc"
+            data-color-border-outer-end="#ccc"
+            data-color-needle-shadow-down="#222"
+            data-border-shadow-width="0"
+            data-animation-duration="1500"
+        ></canvas>
+    </div>
+    <script src="//cdn.rawgit.com/Mikhus/canvas-gauges/gh-pages/download/2.1.7/all/gauge.min.js"></script>
+    <script>
+       var gauge = new RadialGauge({
+            renderTo: 'canvas-id',
+            minValue: 0,
+            maxValue: 360,
+            majorTicks: [
+                "N",
+                "NE",
+                "E",
+                "SE",
+                "S",
+                "SW",
+                "W",
+                "NW",
+                "N"
+            ],
+            minorTicks: 22,
+            ticksAngle: 360,
+            startAngle: 180,
+            strokeTicks: false,
+            highlights: false,
+            colorPlate: "#222",
+            colorMajorTicks: "#f5f5f5",
+            colorMinorTicks: "#ddd",
+            colorNumbers: "#ccc",
+            colorNeedle: "rgba(240, 128, 128, 1)",
+            colorNeedleEnd: "rgba(255, 160, 122, .9)",
+            valueBox: false,
+            valueTextShadow: false,
+            colorCircleInner: "#fff",
+            colorNeedleCircleOuter: "#ccc",
+            needleCircleSize: 15,
+            needleCircleOuter: false,
+            animationRule: "linear",
+            needleType: "line",
+            needleStart: 75,
+            needleEnd: 99,
+            needleWidth: 3,
+            borders: true,
+            borderInnerWidth: 0,
+            borderMiddleWidth: 0,
+            borderOuterWidth: 10,
+            colorBorderOuter: "#ccc",
+            colorBorderOuterEnd: "#ccc",
+            colorNeedleShadowDown: "#222",
+            borderShadowWidth: 0,
+            animationDuration: 1500
+        }).draw();
+    </script>
+
+    <script>
+        function onoff()
+        {
+            
+        }
+    </script>
+</body>
+</html>
