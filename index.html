@@ -44,13 +44,20 @@
                 Lanterna
             </button>                 
         </div>        
-    </div>  
+    </div> 
 
-    <div class="d-flex justify-content-center my-5">
+    <div class="d-flex justify-content-center my-1 text-dark">
+        <span>Ângulo: </span>
+        <h2 id="angular" class="ms-2">0</h2>
+    </div>
+        
+    <div class="d-flex justify-content-center my-5">        
         <canvas id="canvas-id"></canvas>
     </div>
 
     <script>
+        var angular = document.getElementById('angular');
+
         let status = false;
         var gauge = new RadialGauge({
             renderTo: 'canvas-id',
@@ -99,10 +106,9 @@
             console.log(status)
         }
 
-        function set_angular(value) {
-            if (gauge && !isNaN(value)) {
-                gauge.value = value;
-            }
+        function set_angular(value) {        
+            angular.innerText = value;
+            gauge.value = value;
         }
     </script>
 </body>
