@@ -45,21 +45,23 @@
             </button>                 
         </div>        
     </div> 
-
-    <div class="d-flex justify-content-center my-1 text-dark">
-        <span>Ângulo: </span>
-        <h2 id="angular" class="ms-2">0</h2>
-    </div>
-        
-    <div class="d-flex justify-content-center my-5">        
-        <canvas id="canvas-id"></canvas>
-    </div>
+    
+    <div class="row">
+        <div class="d-flex justify-content-center my-1 text-dark">
+            <span>Ângulo: </span>
+            <h2 id="angular" class="ms-2">0</h2>
+        </div>
+            
+        <div class="d-flex justify-content-center my-5">        
+            <canvas id="canvas-id"></canvas>
+        </div>
+    </div>    
 
     <script>
         var angular = document.getElementById('angular');
 
         let status = false;
-        var gauge = new RadialGauge({
+        const gauge = new RadialGauge({
             renderTo: 'canvas-id',
             width: 350,
             height: 350,
